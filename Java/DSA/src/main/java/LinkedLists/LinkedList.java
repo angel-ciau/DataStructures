@@ -42,27 +42,30 @@ private int length;
 
     }
 
-    public void removeLast() {
-        if (length == 0) {
-            tail = tail;
-            head = head;
+    public Node removeLast() {
+        if (length == 0){
+            return null;
         }
-        if (length == 1) {
-            tail = null;
+        if (length == 1){
             head = null;
+            tail = null;
+            length--;
         }
-        else{
+        else {
             Node temp = head;
             while (temp != tail){
-                if (temp.next == tail) {break;}
+                if (temp.next == tail) break;
                 temp = temp.next;
-               // System.out.println("temp: " + temp.value);
+                // System.out.println("temp: " + temp.value);
             }
             tail = temp;
             tail.next = null;
-            length = length - 1;
-
+            length--;
+            return temp;
         }
+        return null;
+        // if (length == 1) tail = null;
+
     }
 
     public void getHead(){

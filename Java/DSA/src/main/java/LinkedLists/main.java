@@ -8,7 +8,16 @@ public class main {
 //    newLinkedList.getHead();
 //    newLinkedList.getTail();
         //newLinkedList.appendNode(2);
-        newLinkedList.appendNode(3);
+        newLinkedList.appendNode(2);
+        System.out.println("Original");
+        newLinkedList.printList();
+        System.out.println("One less");
+        newLinkedList.removeLast();
+        newLinkedList.printList();
+        System.out.println("Two less");
+        newLinkedList.removeLast();
+        newLinkedList.printList();
+
     }
 }
 
